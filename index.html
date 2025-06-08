@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalayan Expedition Analytics Platform</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            overflow: hidden;
+        }
+        
+        .timeline-container {
+            backdrop-filter: blur(8px);
+            background: rgba(15, 23, 42, 0.98);
+            border-top: 2px solid rgba(51, 65, 85, 0.8);
+            height: 160px;
+            flex-shrink: 0;
+        }
+        
+        .control-panel {
+            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.9);
+        }
+        
+        .stats-card {
+            backdrop-filter: blur(8px);
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(51, 65, 85, 0.3);
+        }
+        
+        .chart-container {
+            background: rgba(30, 41, 59, 0.6);
+        }
+        
+        #three-container {
+            cursor: grab;
+        }
+        
+        #three-container:active {
+            cursor: grabbing;
+        }
+        
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(51, 65, 85, 0.3);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 116, 139, 0.6);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 116, 139, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="js/components/DataProcessor.js"></script>
+    <script type="text/babel" src="js/components/ThreeVisualization.js"></script>
+    <script type="text/babel" src="js/components/AnalyticsDashboard.js"></script>
+    <script type="text/babel" src="js/components/TimelineControl.js"></script>
+    <script type="text/babel" src="js/components/ControlPanel.js"></script>
+    <script type="text/babel" src="js/App.js"></script>
+</body>
+</html> 

@@ -1,0 +1,16 @@
+{
+  "width": 7202,
+  "height": 7202,
+  "min_elevation": 1000.0,
+  "max_elevation": 8848.0,
+  "original_min": 1.0,
+  "original_max": 255.0,
+  "bounds": {
+    "north": 29.000138888888998,
+    "south": 26.999567328888997,
+    "east": 88.000432671111,
+    "west": 85.999861111111
+  },
+  "crs": "EPSG:4326",
+  "heightmap_file": "heightmap.png"
+}

@@ -1,0 +1,16 @@
+{
+  "expeditions": {
+    "total": 11425,
+    "successful": 6357,
+    "success_rate": 55.64113785557987,
+    "total_deaths": 823,
+    "year_range": "1905-2024"
+  },
+  "peaks": {
+    "total": 480,
+    "highest": {
+      "name": "Everest",
+      "height": 8849
+    }
+  }
+}
